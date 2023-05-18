@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <select id="comboBox" class="comboBox">
+            <option id="option1" class="option" value="1">Easy</option>
+            <option id="option2" selected class="option" value="2">Normal</option>
+            <option id="option3" class="option" value="3">Hard</option>
+        </select>
+        <button id="startButton" class="startButton">start</button>
+        <div class="box flag_box">
+            <img class="header_icons" src="./img/flag_icon.png" alt="#">
+            <p id="flag-amount" class="amount flag_amount">40</p>
+        </div>
+        <div class="box time_box">
+            <img class="header_icons" src="./img/clock_icon.png" alt="#">
+            <p id = "time-amount" class="amount time_amount">00:00</p>
+        </div>
+    </header>
+
+    <div id="game_board" class="game-board">
+<!--        <div class="square">-->
+<!--            <div class="tile">-->
+<!--                <img class="flag_img" src="./img/flag_icon.png" alt="#">-->
+<!--            </div>-->
+<!--            <div class="bomb"></div>-->
+<!--            <div class="number">2</div>-->
+<!--        </div>-->
+    </div>
+
+    <div class="myWinAlert myAlert" style="display: none">
+
+        <div class="block winBlock">
+            <div class="box">
+                <p class="youWin">You WIN :)</p>
+                <img class="winIMG" src="./img/Trophy-PNG.png" alt="#">
+            </div>
+            <p id="timeID" class="time">Time: </p>
+            <button id="restart1" class="start">Start</button>
+        </div>
+    </div>
+    <div class="myOverAlert myAlert" style="display: none">
+        <div class="block overBlock">
+            <p class="gameOver">GameOver :(</p>
+            <button id="restart2" class="start">Restart</button>
+        </div>
+    </div>
+
+    <script src="./js/script.js" type="module"></script>
+</body>
+</html>

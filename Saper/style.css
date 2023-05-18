@@ -1,0 +1,188 @@
+/** TODO #4a752c header
+
+    TODO #aad750 tile1
+    TODO #a2d148 tile2
+
+    TODO #e5c29f square1
+    TODO #d7b899 square1
+ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+/* TODO font-family: 'Roboto', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+/*font-family: 'Ubuntu', sans-serif;*/
+
+body{
+    padding: 0;
+    margin: 0;
+    background: #4a752c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header{
+    width: 100%;
+    height: auto;
+    background: #4a752c;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    gap: 3%;
+
+}
+header .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+header .header_icons{
+    width: 50px;
+    height: 50px;
+}
+
+.comboBox{
+    padding: 8px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+}
+.startButton{
+    font-weight: 700;
+    padding: 6px 25px;
+    font-size: 20px;
+    background: orange;
+    border: 2px solid #555;
+    color: #4a752c;
+    transition: .15s;
+}
+.startButton:hover{
+    background: #d18c00;
+    color: #ffffff;
+
+}
+
+.game-board{
+    --size:0;
+    --square-size:40px;
+    --numberSize:25px;
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(var(--size),var(--square-size));
+    grid-template-rows: repeat(var(--size),var(--square-size));
+}
+.game-board .square{
+    width: var(--square-size);
+    height: var(--square-size);
+    background: #e5c29f;
+}
+.game-board .square .tile{
+    --color:"#aad750";
+    width: 100%;
+    height: 100%;
+    background: var(--color);
+}
+.game-board .square .tile img{
+    width: 100%;
+    height: 100%;
+}
+.game-board .square .bomb{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #d34f4f;
+}
+.game-board  .number{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--numberSize);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+
+}
+.myAlert{
+    width: 100%;
+    height: 100vmin;
+    position: absolute;
+    background: #33333360;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.myAlert .block{
+    width: 350px;
+    height: 180px;
+    background: #dfac30;
+    border: 6px #4a752c solid;
+
+}
+
+.myAlert .overBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.myAlert .overBlock p{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    color: #d34f4f;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.myAlert .winBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.myAlert .winBlock .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 0 0;
+}
+.myAlert .winBlock .youWin{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    color: #016301;
+    margin: 0;
+}
+.myAlert .winBlock .time{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    margin: 0;
+}
+.myAlert .winBlock{
+
+}
+.myAlert .winBlock .box img{
+    width: 50px;
+    height: 50px;
+}
+.myAlert .winBlock .start{
+    margin: 0 0 10px 0;
+}
+.myAlert .start{
+    background: #4a752c;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    border: none;
+    color: #fff;
+    padding: 10px 30px;
+    transition: .15s;
+}
+.myAlert .start:hover{
+    background: #30481c;
+}
